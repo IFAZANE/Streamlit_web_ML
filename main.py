@@ -6,8 +6,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-import matplotlib.pyplot as plt
-import seaborn as sns
+#import matplotlib.pyplot as plt
+#import seaborn as sns
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.write('''
@@ -89,9 +89,9 @@ scores_df = pd.DataFrame({
     'Score': [accuracy, precision, recall, f1]
 })
 
-plt.figure(figsize=(10, 6))
-sns.barplot(x='Metric', y='Score', data=scores_df)
-plt.title('Scores des modèles')
-plt.ylim(0, 1)
-plt.xticks(rotation=45)
-st.pyplot()
+# plt.figure(figsize=(10, 6))
+# sns.barplot(x='Metric', y='Score', data=scores_df)
+# plt.title('Scores des modèles')
+# plt.ylim(0, 1)
+# plt.xticks(rotation=45)
+# st.pyplot()
