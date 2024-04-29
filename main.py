@@ -32,7 +32,7 @@ def user_input():
 
 df=user_input()
 
-st.subheader('Les variables explicatives et la classe')
+st.subheader('Les variables explicatives')
 st.write(df)
 
 # Chargement des données Iris
