@@ -12,16 +12,16 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.write('''
 # UCAO Application pour la prévision des fleurs d'Iris
-Cette application prédit la catégorie des fleurs d'Iris
+Nous allons prédire les catégories des fleurs d'Iris
 ''')
 
-st.sidebar.header("Les paramètres d'entrée")
+st.sidebar.header("Les variables explicatives")
 
 def user_input():
-    sepal_length=st.sidebar.slider('La longueur du Sepal',4.3,7.9,5.3)
-    sepal_width=st.sidebar.slider('La largeur du Sepal',2.0,4.4,3.3)
-    petal_length=st.sidebar.slider('La longueur du Petal',1.0,6.9,2.3)
-    petal_width=st.sidebar.slider('La largeur du Petal',0.1,2.5,1.3)
+    sepal_length=st.sidebar.slider('Longueur du Sepal',4.3,7.9,5.3)
+    sepal_width=st.sidebar.slider('Largeur du Sepal',2.0,4.4,3.3)
+    petal_length=st.sidebar.slider('Longueur du Petal',1.0,6.9,2.3)
+    petal_width=st.sidebar.slider('Largeur du Petal',0.1,2.5,1.3)
     data={'sepal_length':sepal_length,
     'sepal_width':sepal_width,
     'petal_length':petal_length,
@@ -32,7 +32,7 @@ def user_input():
 
 df=user_input()
 
-st.subheader('On veut trouver la catégorie de cette fleur')
+st.subheader('Les variables explicatives et la classe')
 st.write(df)
 
 # Chargement des données Iris
